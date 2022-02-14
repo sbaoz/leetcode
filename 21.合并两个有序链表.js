@@ -1,0 +1,43 @@
+/*
+ * @Author: your name
+ * @Date: 2022-02-14 13:40:02
+ * @LastEditTime: 2022-02-14 14:43:14
+ * @LastEditors: Please set LastEditors
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: \leetcode\21.合并两个有序链表.js
+ */
+/*
+ * @lc app=leetcode.cn id=21 lang=javascript
+ *
+ * [21] 合并两个有序链表
+ */
+
+// @lc code=start
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val, next) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.next = (next===undefined ? null : next)
+ * }
+ */
+/**
+ * @param {ListNode} list1
+ * @param {ListNode} list2
+ * @return {ListNode}
+ */
+var mergeTwoLists = function (list1, list2) {
+  if (list1 === null) {
+    return list2;
+  } else if (list2 === null) {
+    return list1;
+  } else {
+    if (list1.val < list2.val) {
+      list1.next = mergeTwoLists(list1.next, list2);
+      return list1;
+    } else {
+      list2.next = mergeTwoLists(list1, list2.next);
+      return list2;
+    }
+  }
+};
+// @lc code=end
