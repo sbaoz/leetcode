@@ -1,9 +1,9 @@
 /*
  * @Author: your name
  * @Date: 2022-02-15 09:50:11
- * @LastEditTime: 2022-02-15 10:58:01
+ * @LastEditTime: 2022-02-16 16:07:21
  * @LastEditors: Please set LastEditors
- * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @Description: 双指针
  * @FilePath: \leetcode\26.删除有序数组中的重复项.js
  */
 /*
